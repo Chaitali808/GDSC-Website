@@ -20,11 +20,11 @@ section{
 }
 
 .red {
-    background: #dd3f31;
+    background: #ff3e30;
 }
 
 .pink {
-    background: #ff0066;
+    background: #f7b529;
     overflow: hidden;
 }
 
@@ -108,9 +108,9 @@ section{
     background-image: url('./layer1.svg');
 }
 
-.layer2 {
+/* .layer2 {
     background-image: url('./layer2.svg');
-}
+} */
 
 .flip {
     transform: rotate(180deg);
