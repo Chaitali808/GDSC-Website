@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Noto+Sans+TC:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #202731;
+    overflow-x: hidden;
+
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+.blue {
+    background: #fff;
+}
+
+.red {
+    background: #ff3e30;
+}
+
+.pink {
+    background: #f7b529;
+    overflow: hidden;
+}
+
+.dark {
+    background: #0f0f10;
+}
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: rgb(32, 39, 49);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+.bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 85%;
+}
+
+/* Curved bg with SVG via https://www.shapedivider.app/ */
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 262px;
+}
+
+.wave .shape-fill {
+    fill: hsl(240, 3%, 6%);
+}
+
+/* SVG background image via https://haikei.app/ */
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('./layer1.svg');
+}
+
+/* .layer2 {
+    background-image: url('./layer2.svg');
+} */
+
+.flip {
+    transform: rotate(180deg);
+}
+
+/* Blobs SVG background image via https://haikei.app/ */
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+    z-index: 0;
+}
+
+.blob-content {
+    z-index: 1;
+}
+
+.blobs {
+    width: 100%;
+    background: url('./blobs.svg') no-repeat bottom / cover;
+}
+.description {
+    position: absolute;
+    top: 27%;
+    left: 6rem;
+    width: 100%;
+    height: 60%;
+    color: #fff;
+}
+h1 {
+    font-size: 40px;
+    color: #0f0f10;
+    font-family: 'Lora', serif; 
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 25px;
+    width: 93%;
+    padding-top: 1rem;
+    color: #0f0f10;
+}
+.svgelem {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+.gradient-button {
+    display: inline-block;
+    padding: 10px 40px;
+    background: linear-gradient(45deg, #FF6B6B, #6B47FF);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.6s;
+}
+.gradient-button:hover {
+    background: linear-gradient(45deg, #6B47FF, #FF6B6B);
+}
+a{
+    text-decoration: none !important;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(45deg, #FF6B6B, #6B47FF);
+    animation: backgroundAnimation 10s linear infinite alternate;
+    
+}
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #FF6B6B, #6B47FF);
+    }
+
+    100% {
+        background: linear-gradient(45deg, #6B47FF, #FF6B6B);
+    }
+}
+/* .circle {
+    position: absolute;
+    background-color: #6B47FF;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid #FF6B6B;
+    top: 1%;
+    left: 70%;
+} */
